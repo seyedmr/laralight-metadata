@@ -1,5 +1,5 @@
 {
-    "name": "seyed/laralight-meta",
+    "name": "seyedmr/laralight-metadata",
     "description": "a light package for adding meta-data to laravel projects",
     "type": "laravel-package",
     "authors": [
