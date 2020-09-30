@@ -8,5 +8,10 @@
             "email": "mr.smaili313@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "SeyedMR\\LaraliteMetadata\\": "src"
+        }
+    },
     "require": {}
 }
