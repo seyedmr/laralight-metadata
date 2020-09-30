@@ -25,7 +25,7 @@ trait HasMeta
         if (!$meta) {
             $meta = new MetaData();
             $meta->owner_id = $this->id;
-            $meta->meta_key = $key;
+            $meta->key = $key;
             $meta->model = self::class;
         }
         $meta->value = $value;
