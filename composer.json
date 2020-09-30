@@ -1,0 +1,12 @@
+{
+    "name": "seyed/laralight-meta",
+    "description": "a light package for adding meta-data to laravel projects",
+    "type": "laravel-package",
+    "authors": [
+        {
+            "name": "seyed mohammad reza seyed esmaeil",
+            "email": "mr.smaili313@gmail.com"
+        }
+    ],
+    "require": {}
+}
