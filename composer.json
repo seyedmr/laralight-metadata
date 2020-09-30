@@ -13,5 +13,13 @@
             "SeyedMR\\LaraliteMetadata\\": "src"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SeyedMR\\LaraliteMetadata\\LaraliteMetadataServiceProvider"
+            ]
+        }
+    },
+
     "require": {}
 }

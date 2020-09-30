@@ -16,6 +16,7 @@ class CreateMetaDataTable extends Migration
         Schema::create('meta_data', function (Blueprint $table) {
             $table->id();
             $table->string('model',32);
+            $table->integer('owner_id')->unsigned();
             $table->string('key',32);
             $table->text('value');
             $table->timestamps();

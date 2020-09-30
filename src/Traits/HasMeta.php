@@ -1,33 +1,34 @@
 <?php
 namespace SeyedMR\LaraliteMetadata\Traits;
 
-use App\UserMetaData;
+use SeyedMR\LaraliteMetadata\Models\MetaData;
 
 trait HasMeta
 {
     public function Meta()
     {
-        return $this->hasMany(\App\UserMetaData::class);
+        return $this->hasMany(SeyedMR\LaraliteMetadata\Models\MetaData::class,'owner_id')->where('model',self::class);
     }
 
     public function getMeta($key)
     {
-        $meta = $this->meta->where('meta_key', $key)->first();
+        $meta = $this->meta->where('key', $key)->first();
         if(!$meta){
             return null;
         }
-        return $meta->meta_value;
+        return $meta->value;
     }
 
     public function setMeta($key, $value)
     {
-        $meta = $this->meta->where('meta_key', $key)->first();
+        $meta = $this->getMeta($key);
         if (!$meta) {
-            $meta = new UserMetaData();
-            $meta->user_id = $this->id;
+            $meta = new MetaData();
+            $meta->owner_id = $this->id;
             $meta->meta_key = $key;
+            $meta->model = self::class;
         }
-        $meta->meta_value = $value;
+        $meta->value = $value;
         return $meta->save();
     }
 
