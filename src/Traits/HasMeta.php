@@ -1,7 +1,7 @@
 <?php
 namespace SeyedMR\LaraliteMetadata\Traits;
 
-use SeyedMR\LaraliteMetadata\Models\MetaData;
+use \SeyedMR\LaraliteMetadata\Models\MetaData;
 
 trait HasMeta
 {
