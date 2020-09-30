@@ -7,7 +7,7 @@ trait HasMeta
 {
     public function Meta()
     {
-        return $this->hasMany(SeyedMR\LaraliteMetadata\Models\MetaData::class,'owner_id')->where('model',self::class);
+        return $this->hasMany(\SeyedMR\LaraliteMetadata\Models\MetaData::class,'owner_id')->where('model',self::class);
     }
 
     public function getMeta($key)
