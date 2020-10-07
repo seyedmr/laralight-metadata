@@ -12,7 +12,7 @@ trait HasMeta
 
     public function getMeta($key)
     {
-        $meta = $this->GetMetaData('key', $key);
+        $meta = $this->GetMetaData($key);
         if(!$meta){
             return null;
         }
