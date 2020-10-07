@@ -12,7 +12,7 @@ trait HasMeta
 
     public function getMeta($key)
     {
-        $meta = $this->meta->where('key', $key)->first();
+        $meta = $this->GetMetaData('key', $key);
         if(!$meta){
             return null;
         }
@@ -21,7 +21,7 @@ trait HasMeta
 
     public function setMeta($key, $value)
     {
-        $meta = $this->getMeta($key);
+        $meta = $this->GetMetaData($key);
         if (!$meta) {
             $meta = new MetaData();
             $meta->owner_id = $this->id;
@@ -30,6 +30,10 @@ trait HasMeta
         }
         $meta->value = $value;
         return $meta->save();
+    }
+    
+    private function GetMetaData($key){
+            return $this->meta->where('key', $key)->first();
     }
 
 }
