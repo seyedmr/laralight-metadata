@@ -1,6 +1,6 @@
 # Laralight Metadata
 laralight-metadata package created for those projects need to have metadata.
-i named this to laralight becouse this package is so light and also created for 'lara'vel. 
+i named this to laralight because this package is so light and also created for 'lara'vel. 
 
 i created a lot light package for laravel and i'll add them to my git soon.
 
